@@ -20,14 +20,17 @@ python -m pip install --upgrade pip
 Создайте виртуальную среду :
 
 python -m venv env
+
 source env/bin/activate  # для Linux/Mac
 
 .env\Scripts\activate     # для Windows
 
 Проект требует установить библиотеки pillow и qrcode. Для этого выполните команду:
+
 pip install pillow qrcode
 
 Документация:
+
 Pillow — https://pillow.readthedocs.io/en/stable/
 
 qrcode — https://pypi.org/project/qrcode/
