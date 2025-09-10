@@ -33,11 +33,9 @@ class ImageProcessor:
         qr_img = self.generate_qr_code(qr_data)
         qr_size = qr_img.size
 
-        # Создаем стратегию размещения
         strategy = StrategyFactory.create_strategy(pattern_name, base_image, qr_size, margin)
         position = strategy.get_position()
 
-        # Определяем слой для смешивания
         combined = base_image.copy()
         combined.paste(qr_img, position, qr_img)
 
