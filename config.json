@@ -1,0 +1,16 @@
+{
+  "scenarios": {
+    "bottom_right": {
+      "pattern": "bottom_right",
+      "margin": 10
+    },
+    "center": {
+      "pattern": "center",
+      "margin": 0
+    },
+    "top_left": {
+      "pattern": "top_left",
+      "margin": 15
+    }
+  }
+}
