@@ -11,6 +11,7 @@
 Убедитесь, что Python 3.8+ установлен в системе.
 python -m pip install --upgrade pip
 Создайте виртуальную среду (рекомендуется):
+
 python -m venv env
 source env/bin/activate  # для Linux/Mac
 
