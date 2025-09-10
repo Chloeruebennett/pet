@@ -38,6 +38,9 @@ qrcode — https://pypi.org/project/qrcode/
 opencv - https://pypi.org/project/opencv-python/
 
 Введите путь к изображению (*.jpg)
+
 Введите данные для QR-кода (https://*.com)
+
 Выберите сценарий из предложенных (center)
+
 После завершения в папке появится файл output_test_image.jpg — результат.
