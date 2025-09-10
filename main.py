@@ -29,3 +29,28 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+try:
+    image_path = input("Введите путь к изображению: ").strip()
+    if not os.path.exists(image_path):
+        raise FileNotFoundError(f"Файл не найден: {image_path}")
+
+    qr_data = input("Введите данные для QR-кода: ").strip()
+
+    scenarios = list(config['scenarios'].keys())
+    print("Доступные сценарии:", scenarios)
+    scenario_name = input("Выберите сценарий: ").strip()
+    if scenario_name not in scenarios:
+        raise ValueError(f"Некорректный сценарий: {scenario_name}")
+
+    result_image = processor.find_place_and_place_qr(image_path, qr_data, scenario_name)
+    output_path = "output_" + os.path.basename(image_path)
+    result_image.save(output_path)
+    print(f"Изображение успешно сохранено как {output_path}")
+
+except FileNotFoundError as e:
+    print(f"Ошибка: {e}")
+except ValueError as e:
+    print(f"Ошибка: {e}")
+except Exception as e:
+    print(f"Произошла непредвиденная ошибка: {e}")
